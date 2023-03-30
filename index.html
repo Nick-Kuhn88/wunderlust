@@ -167,32 +167,60 @@ Population: 923,608
     <section>
         <h2>Contact Us</h2>
 
-        <form action="##" method="post">
-            <label for="first-name" aria-placeholder="Enter first name">First Name</label>
-            <input type="text" name="first-name" id="first-name" required>
+        <form action="example.com/example" method="post">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" placeholder="Enter first name" required>
 
             <label for="last-name">Last Name</label>
-            <input type="text" name="last-name" id="last-name" required>
+            <input type="text" name="last-name" id="last-name" placeholder="Enter last name" required>
 
+            <fieldset>
+                <legend>Contact Method</legend>
+
+                <input type="radio" name="contact" value="email" checked>
+                <label for="email">Email</label>
+                <input type="radio" name="contact" id="textmsg" value="textmsg">
+                <label for="textmsg">Text</label>
+                <input type="radio" name="contact" value="phone">
+                <label for="phone">Phone</label>
+            </fieldset>
+            
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter Email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter telephone number" required>
+
+            <label for="destination">Destination</label>
+            <input list="destinations" name="destination" id="destination" required>
+            <datalist id="destinations">
+                <option value="Barcelona">
+                <option value="Granada">
+                <option value="Ibiza">
+                <option value="Madrid">
+                <option value="Majorca">
+                <option value="Seville">
+                <option value="Tenerife">
+                <option value="Valencia">
+            </datalist>
+            <label for="time">Travel Time</label>
+            <input list="seasons" name="time" id="time" required>
+            <datalist id="seasons">
+                <option value="Fall">
+                <option value="Winter">
+                <option value="Spring">
+                <option value="Summer">
+                <option value="Flexible">
+            </datalist>
 
         </form>
     </section>
-
-First Name 
-Last Name (Enter last name)
-
-Contact Method (Email, Text, Phone)
-Email Address (Enter Email)
-Phone Number (Enter telephone number)
-
-Destination (Barcelona, Granada, Ibiza, Madrid, Majorca, Seville, Tenerife, Valencia)
-Travel Time (Fall, Winter, Spring, Summer, Flexible)
-
-
     </main>
-Copyright 2021 Wunderlust
-Privacy Statement
-Terms of Service
+    <footer>
+        <small>Copyright 2021 Wunderlust</small>
+        <small>Privacy Statement</small>
+        <small>Terms of Service</small>
+    </footer>
 
 </body>
 </html>
