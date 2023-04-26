@@ -103,6 +103,10 @@ table {
   }
 
   /* Header Styles */
+
+  h1, h2, h3 {
+    font-family: var(--headings);
+  }
   #menu-toggle {
     display: block;
     position: relative;
@@ -163,13 +167,6 @@ table {
       -webkit-transform-origin: 0% 0%;
         -ms-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
-  }
-  
-  /* 
-   * Change the color of the hamburger when toggled
-   */
-  #menu-toggle input:checked + label div {
-    background: #232323;
   }
   
   /*
