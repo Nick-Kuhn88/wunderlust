@@ -64,6 +64,7 @@ table {
 }
 
 /* Skip Link Styles */
+
 #skip {
     position: absolute;
     left: -10000px;
@@ -78,3 +79,25 @@ table {
     width: auto;
     height: auto;
   }
+
+  /* Hidden Content Styles */
+
+  .sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  /* Body Styles */
+
+  body {
+    font-family: var(--fonts);
+    color: var(--black);
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+   
