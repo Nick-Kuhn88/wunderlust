@@ -300,3 +300,22 @@ p {
     padding-left: 20px;
     padding-right: 20px;
   }
+  /* * * * * * * * * * * * *  */
+  #contact span {
+    font-size: 16px;
+    font-family: var(--fonts);
+    font-style: italic;
+  }
+  #contact div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .required {
+    color: var(--purple);
+  }
+  #names label {
+    font-weight: bold;
+  }
