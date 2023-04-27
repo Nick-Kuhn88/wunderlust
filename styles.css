@@ -274,8 +274,29 @@ p {
   }
   /* * * * * * * * * * * * *  */
   #testimonials {
+    text-align: center;
+  }
+  #testimonials div {
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 10px;
     justify-content: center;
   }
-  
+  #testimonials div section {
+    grid-column: 1 / 2;
+  }
+  /* * * * * * * * * * * *  */
+  #about {
+    background-color: var(--blue); 
+    text-align: center;
+  }
+  #about div {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
