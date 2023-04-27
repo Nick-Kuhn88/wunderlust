@@ -301,6 +301,9 @@ p {
     padding-right: 20px;
   }
   /* * * * * * * * * * * * *  */
+  #contact {
+    margin-bottom: 20px;
+  }
   #contact span {
     font-size: 16px;
     font-family: var(--fonts);
@@ -320,13 +323,16 @@ p {
   padding: 0.25em 0.5em;
   background-color: #fff;
   border: 3px solid var(--purple);
-  border-radius: 4px;
   }
   .required {
     color: var(--purple);
   }
   #names, #nums, #selects label {
     font-weight: bold;
+  }
+  #nums fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   input[type="radio"] {
     -webkit-appearance: none;
@@ -348,8 +354,8 @@ p {
   
   input[type="radio"]::before {
     content: "";
-    width: 2.5em;
-    height: 2.5em;
+    width: 1.75em;
+    height: 1.75em;
     border-radius: 50%;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
@@ -365,4 +371,32 @@ p {
   input[type="radio"]:focus {
     outline: max(2px, 0.15em) solid var(--purple);
     outline-offset: max(2px, 0.15em);
+  }
+  .custom-select select{
+    font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 3px solid var(--purple);
+  }
+  #destination, #travelTime {
+    color: var(--purple);
+    size: 2em;
+  }
+  #mySubmit {
+    background-color: var(--purple);
+  }
+  /* FOOTER */
+  footer {
+    background-color: var(--light-gray);
+    display: grid;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+  }
+  footer a {
+    text-decoration: none;
+    color: #000000;
+    margin-top: 5px;
   }
