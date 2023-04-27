@@ -100,6 +100,7 @@ table {
     margin: 0;
     padding:0;
     line-height: 2.0;
+    overflow-x: hidden;
   }
   img {
     display: block;
@@ -130,6 +131,9 @@ h4 {
 p {
     font-size: 16px;
 }
+q {
+    quotes: "“" "”" "‘" "’";
+  }
   /* Menu Styles
   #menu-toggle {
     display: block;
@@ -272,6 +276,7 @@ p {
     margin-bottom: 10px;
     text-align: center;
   }
+  
   /* * * * * * * * * * * * *  */
   #testimonials {
     text-align: center;
@@ -284,6 +289,20 @@ p {
   }
   #testimonials div section {
     grid-column: 1 / 2;
+  }
+  #testimonials img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  #testimonials q {
+    font-style: italic;
+  }
+  #testimonials q::before {
+    content: open-quote;
+  }
+  #testimonials q::after {
+    content: close-quote;
   }
   /* * * * * * * * * * * *  */
   #about {
@@ -301,6 +320,17 @@ p {
     padding-right: 20px;
   }
   /* * * * * * * * * * * * *  */
+  form label {
+    font-size: 1.5em;
+  }
+  form input {
+    line-height: 3em;
+  }
+  input::placeholder {
+    font-size: 1.5em;
+    padding: 5px;
+    color: var(--dark-gray)
+  }
   #contact {
     margin-bottom: 20px;
   }
@@ -331,8 +361,8 @@ p {
     font-weight: bold;
   }
   #nums fieldset {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: inline-grid;
+    grid-template-columns: 1fr;
   }
   input[type="radio"] {
     -webkit-appearance: none;
@@ -382,7 +412,8 @@ p {
   }
   #destination, #travelTime {
     color: var(--purple);
-    size: 2em;
+    font-size: 1.5em;
+    color: #000000;
   }
   #mySubmit {
     background-color: var(--purple);
