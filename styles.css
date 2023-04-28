@@ -380,7 +380,6 @@ q {
   input[type="radio"] {
     -webkit-appearance: none;
     appearance: none;
-    background-color: var(--form-background);
     margin: 0;
   
     font: inherit;
@@ -402,8 +401,6 @@ q {
     border-radius: 50%;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em var(--form-control-color);
-    /* Windows High Contrast Mode */
     background-color: var(--purple);
   }
   
@@ -655,14 +652,15 @@ q {
         grid-auto-flow: row;
         justify-content: start;
     }
-    form label {
+    #contact label {
         font-size: 20px;
+        padding: 10px;
     }
     #names input {
         height: 30px;
     }
     fieldset label {
-        display: inline-flex;
+        display: flex;
     }
 
     footer {
