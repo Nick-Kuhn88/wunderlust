@@ -602,6 +602,9 @@ q {
         width: 200px;
         text-align: center;
     }
+    h3 {
+        text-align: start;
+    }
     #intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -619,13 +622,25 @@ q {
         height: auto;
         margin: 0;
     }
-
-    #plan div {
+    #plan h3 {
+        text-align: left;
+    }
+    /* #plan div {
         display: flex;
         flex-wrap: nowrap;
         flex-grow: 2;
         justify-content: space-between;
         padding-left: 20px;
         padding-right: 20px;
+    } */
+    #plan div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-evenly;
+    }
+    #testimonials div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-evenly;
     }
   }
