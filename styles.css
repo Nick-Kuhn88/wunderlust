@@ -1,5 +1,6 @@
 /* Created by Nicholas Kuhn */
 
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -261,6 +262,7 @@ q {
   #img-grid picture {
     width: 100%;
     height: auto;
+    margin: 0;
   }
   /* ***************** */
   #plan {
@@ -432,6 +434,9 @@ q {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.5em;
+  }
+  #selects input:last-child:hover {
+    cursor: pointer;
   }
   /* FOOTER */
   footer {
@@ -641,6 +646,37 @@ q {
     #testimonials div {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
         justify-content: space-evenly;
+    }
+    #contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: row;
+        justify-content: start;
+    }
+    form label {
+        font-size: 20px;
+    }
+    #names input {
+        height: 30px;
+    }
+    fieldset label {
+        display: inline-flex;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 70% 1fr 1fr;
+
+        justify-content: space-between;
+    }
+    footer p {
+        grid-column: 1 / 2;
+        justify-self: start;
+    }
+    footer a:first-of-type {
+        grid-column: 2 / 3;
+        justify-self: end;
     }
   }
