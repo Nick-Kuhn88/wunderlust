@@ -137,7 +137,6 @@ q {
     quotes: "“" "”" "‘" "’";
     font-size: 20px;
   }
-  /* Menu Styles
   #menu-toggle {
     display: block;
     position: relative;
@@ -152,17 +151,18 @@ q {
   
   #menu-toggle a {
     text-decoration: none;
-    color: #232323;
-    background-color: var(--teal);
+    color: var(--dark-gray);
     -webkit-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
   }
   
   #menu-toggle a:hover {
-    color: #4f7794;
+    background-color: var(--yellow);
   }
   
+  
+  /* The hamburger button hidden inside an input element */
   #menu-toggle input {
     display: block;
     width: 30px;
@@ -172,8 +172,8 @@ q {
     left: -5px;  
     padding: 0;
     cursor: pointer;  
-    opacity: 0; 
-    z-index: 2;  
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */  
     -webkit-touch-callout: none;
   }
   
@@ -184,30 +184,43 @@ q {
     height: 30px;
   }
   
+  /*
+   * Hamburger
+   */
+  #menu-toggle label div {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;  
+    z-index: 1;  
+    -webkit-transform-origin: 4px 0px;  
+        -ms-transform-origin: 4px 0px;  
+            transform-origin: 4px 0px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
   #menu-toggle label div:first-child {
     -webkit-transform-origin: 0% 100%;
         -ms-transform-origin: 0% 100%;
             transform-origin: 0% 100%;
   }
   
-  #menu-toggle label div:nth-child(2) {
+  #menu-toggle label div:nth-child(4) {
       -webkit-transform-origin: 0% 0%;
         -ms-transform-origin: 0% 0%;
             transform-origin: 0% 0%;
   }
   
-  #menu {
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-    background: #ededed;
-    list-style-type: none;
-    left: -100%;
-    -webkit-transition: left 0.3s ease;
-    -o-transition: left 0.3s ease;
-    transition: left 0.3s ease; 
+  /* 
+   * Change the color of the hamburger when toggled
+   */
+  #menu-toggle input:checked + label div {
+    background: #232323;
   }
   
   #menu li {
@@ -215,10 +228,15 @@ q {
     font-size: 22px;
   }
   
+  /*
+   * Slide the menu in from left when the input is checked
+   */
   #menu-toggle input:checked ~ ul {
     left: 0;
-  } */
-
+  } 
+  #menu-toggle label:first-of-type {
+    display: none;
+  }
 /* Header Styles */
 
   header {
